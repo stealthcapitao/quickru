@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <title>Quickru</title>
+      <link rel="stylesheet" href="/stylesheets/main.css">
+      <script data-ad-client="ca-pub-2840529467020543" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+  </head>
+  
+
+
+<body>
+  <!-- Header -->
+  <div id="header-wrapper">
+    <div id="header" class="container">
+      <div id="logo">
+        <h1><span class="<%= typeof page !== 'undefined' && page === 'orders' ? 'active' : '' %>"></span><a class="logo" href="/orders">Quickru</a></h1>
+      </div>
+      <!-- Menu -->
+      <div id="menu">
+        
+  
+    
+    
+      
+    <!-- Header mobile button -->
+    
+    
+      
+    <label class="currency"><input  type="checkbox" id="checkbox" class="currency-radio" checked><h2 class="img-radio img-radio-check"></h2><span class="img-radio img-radio-check"></span>
+      
+      <nav class="header-nav">
+          <ul class="header-ul">
+              <li class="header-li"><a class="link" href="/Customer">Уважаемые заказчики!</a></li>
+              <li><a class="link" href="/Aboutus"> О нас</a></li><% if(!currentUser){ %>
+              <li><a href="/login">Войти</a></li>
+              <li class="<%= typeof page !== 'undefined' && page === 'login' ? 'active' : '' %>"><a href="/register">Зарегистрироваться</a></li>
+              <% } else { %>
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+                        <li class="link" id="ct">Приветствуем:<a href="/users/<%= currentUser.id %>" ><%= currentUser.username %></a><a style="color: red; background-color: rgba(255, 0, 0, 0.272);" href="/logout">Logout</a></li>                        
+                <% } %>
+          </ul>
+      </nav>
+      
+  </div>
+</div>
+                     
+
+            
+
+
+  
+
+
+  <!-- Header block -->
+  
+  <div id="header-block"></div><!-- !!!!!!!!!изменить пустой блок под хэдэр-->
+  
+  <!-- Header success -->
+  
+  <div class="container" style=" text-align: center; background-color: white; ">
+    <% if(error && error.length > 0) { %>
+      <div id=" hideMe" class="alert alert-danger"><p id="ctr"><%=error %></p></div>
+    <% } %>
+    
+    <% if(success && success.length > 0) { %>
+      <div id="hideMe" class="alert alert-success"><div id="bp"><p id="ctg"><%= success %></p></div></div>
+    <% } %>
+   </div>
+   <div class="container">
+
+    <div id="arrow"> 
+      <a href="#" id="arrow-inner">↑</a>
+    </div>

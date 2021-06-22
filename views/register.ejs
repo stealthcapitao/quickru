@@ -1,0 +1,70 @@
+
+<% include ./partials/header %>
+
+
+
+
+<div class="wrapper-content">
+    <div class="container" >
+            
+            <!--!!!!!!!!!!!!!!!! FIX THAT -->
+            <!--!!!!!!!!!!!!!!!! FIX THAT -->
+            <!--!!!!!!!!!!!!!!!! FIX THAT -->        
+                              
+                <form class="form" action="/register" method="post">
+                    <h1 style="text-align: center">Регистрация. Уже есть аккаунт? <a id="ct" href="/login">Вход.</a></h1>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="username" placeholder="Никнейм">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="password" name="password" placeholder="Пароль">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="firstName" placeholder="Имя пользователя">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="lastName" placeholder="Фамилия пользователя">
+                    </div>
+    
+                <div class="form-group">
+                    <input class="form-control" type="number" name="phone" placeholder=" Номер телефона: +7(900)555-55-55" maxlength="10">
+                </div>
+                <div class="form-group">
+                    <textarea type="textarea" name="info" placeholder="ссылки на ваши контакты." class="form_order"></textarea>
+                </div>
+                    <div class="form-group">
+                        <input class="form-control" type="email" name="email" placeholder="email">
+                    </div>
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="avatar" placeholder="Аватар url://">
+                    </div>
+                    <div class="form-group">
+                    <label class="currency"> 
+                        <input name="who" class="currency__radio" type="radio" name="currency"  value="freelancer" checked>
+                        <span class="img__radio img__radio_bucks"><h5>Я фрилансер</h5></span>
+                    </label>
+
+                    <label class="currency"> 
+                        <input name="who" class="currency__radio" type="radio" name="currency"  value="orderer" checked>
+                        <span class="img__radio img__radio_bucks"><h5>Я заказчик</h5></span>
+                    </label>
+                </div>  
+                <div class="form-group">
+
+                    <p>Нажимая кнопку "Зарегестрироваться" вы соглашаетесь с <a href="/policy">политикой конфеденциальности</a>.</p>
+                    
+                </div>
+                        <button class="form-button">Зарегистрироваться</button>
+                            <span class="form-button" onclick="history.back();"><a>←Вернуться</a></span>
+                            
+                </form>
+                
+            </div>
+        </div>
+    
+ 
+
+
+    
+<% include ./partials/footer %>
+

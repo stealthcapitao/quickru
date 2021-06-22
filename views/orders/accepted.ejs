@@ -1,0 +1,37 @@
+<% include ../partials/header %>
+<div class="form-group"><span class="form-button" onclick="history.back();"><a>←Вернуться</a></span></div>
+
+<div id="wrapper"class="margin-btm">
+    <h1>Фрилансеры, согласные выполнить ваше задание.</h1>
+
+    <% accepts.forEach(function(accept){ %>
+    <div id="featured-wrapper">
+            <div id="featured" class="margin-btm">
+                <img class="img-box" src="<%= accept.image %>">
+            <div class="caption"><h2><%= accept.name %></h2></div>   
+
+            <div class="caption">
+                <%= accept.description %>
+            </div>       
+
+                  
+    <!-- button -->
+    <a href="/users/<%= accept.author.id %>" class="button">Профиль фрилансера.</a>
+    
+    <form>
+        <p><a href="/<%= accept.author.id %>/give25" class="button">Этот фрилансер выполнил задание.</a></p>
+    </form> 
+
+    
+
+    </div>
+    </div>
+
+
+    <% }); %>
+   
+
+</div>
+
+
+<% include ../partials/footer %>

@@ -1,0 +1,40 @@
+<% include ../partials/header %>
+   
+
+
+<div class="wrapper-content">
+	<div class="container" >
+		<div class="form">
+
+    
+    <div class="row">
+        <h1 style="text-align: center">Создать новое объявление.</h1>
+        <div>
+            <form action="" method="POST">
+               
+               
+                <div class="form-group">
+                    <label for="name"></label>
+                    <input class="form-control" type="text" name="name" id="name" placeholder="Представьтесь" maxlength="18">
+                </div>
+
+                <div class="form-group">
+                    <label for="description"></label>
+                    <textarea type="textarea" name="description" id="description" placeholder="Почему именно вас должны выбрать" class="form_order"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <button class="form-button">Создать</button>
+                </div>
+
+            </form>
+
+                <div class="form-group"><span class="form-button" onclick="history.back();"><a>←Вернуться</a></span></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+<% include ../partials/footer %>

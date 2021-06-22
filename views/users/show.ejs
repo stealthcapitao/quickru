@@ -1,0 +1,64 @@
+<% include ../partials/header %>
+
+
+
+<div class="wrapper-content">
+	<div class="container" >
+		<form class="form">
+			
+		
+			<div class="form-group">
+				<h1><a id="ct"><%= user.username %> </a></h1>
+					<h1><a><%= user.firstName + " " + user.lastName %></a></h1>
+				<div class="form-group">
+
+					<img class="img-box" src="<%= user.avatar %>" alt="user profile image">
+
+					<div class="form-group"><h3 href="mailto:<%= user.email %>"><a id="ct">Email:</a> <%= user.email %></h3></div>
+					<div class="caption"><h4 href=""><a id="ct">Номер телефона:</a><%= user.phone %></h4></div>
+				</div> 
+				<div class="caption">
+                    <p> <%= user.who %></p>
+                    </div>
+
+                    <div class="caption">
+                        <p> FLR: <%= user.flr %></p>
+                        </div>        
+
+				
+				<div class="info">
+            <h5 id="pt"><a id="ct">Информация о пользователе:</a><a><%= user.info %></a></h1>
+		</div>
+
+	</div>
+			
+			
+			<div id="featured" class="margin-btm">
+				<div>
+			<h3> Объявления: <a id="ct"><%= user.username %></a></h3>
+			<ul>
+			<% orders.forEach(function(order) { %>
+				<li id="cl"><a id="cl" href="/orders/<%= order.id %>"><%= order.name %></a></li>
+			<% }); %>
+			</ul>
+			
+			</div>
+
+		</div>
+
+		<p><% if(user._id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %><h2></h2>
+			<a class="form-button" href="/users/<%= user._id %>/edit" style="text-decoration: none;">Редактировать профиль</a></p>
+			<% } %>
+
+		<div class="form-group"><span class="form-button" onclick="history.back();"><a>←Вернуться</a></span></div>
+	
+	
+		</form>
+		
+	</div>
+</div>
+
+
+
+
+<% include ../partials/footer %>

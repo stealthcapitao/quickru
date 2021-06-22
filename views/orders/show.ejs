@@ -1,0 +1,44 @@
+
+<% include ../partials/header %>
+<div class="form-group"><span class="form-button" onclick="history.back();"><a>←Вернуться</a></span></div>
+
+<div class="wrapper-content">
+	<div class="container" >
+		<div class="form">
+
+      
+
+    <div class="container">
+      <img class="img-box" src="<%= order.image %>">
+      <div id="featured" class="margin-btm">
+        <h2><%=order.name%></h2>
+        <h3>Категория:<a id="ct"> <%= order.category %> </a>.</h3>
+        <h4>Бюджет:<%= order.cost %> руб.</h4>
+        <p>О заказе и как связаться:<%= order.description %></p>
+        <h3>Объявление от: <a id="cl" href="/users/<%= order.author.id %>"><%= order.author.username %></a>, <%= moment(order.createdAt).fromNow() %>.</h3>
+        
+        
+        <p><% if(currentUser.who == "freelancer" || currentUser && currentUser.isAdmin){ %><h2></h2>
+        <a class="form-button" href="/orders/<%= order._id %>/accept" id="acceptbutton" style="text-decoration: none;">Принять заказ!</a></p>
+        <% } %>
+
+        <p><% if(currentUser && order.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %><h2></h2>
+          <a class="form-button" href="/orders/<%= order._id %>/accepted" style="text-decoration: none;">Выбрать фрилансера для задания!</a></p>
+          <% } %>
+        <p><% if(currentUser && order.author.id.equals(currentUser._id) || currentUser && currentUser.isAdmin){ %><h2></h2>
+        <a class="form-button" href="/orders/<%= order._id %>/edit" style="text-decoration: none;">Изменить</a></p>
+        <form action="/orders/<%= order._id %>?_method=DELETE" method="POST" class="delete-form">
+            <p><button class="form-button">Удалить</button></p>
+        </form>
+
+        <% } %>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<% include ../partials/footer %>

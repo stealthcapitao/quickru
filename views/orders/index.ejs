@@ -1,0 +1,281 @@
+<% include ../partials/header %> 
+
+
+<!-- Header featured -->
+<div id="header-featured">
+	<div id="banner-wrapper">
+		<div id="banner" class="container">
+			<h2> Добро пожаловать, на QuickRU!</h2>
+            <p>Проекте посвященном удаленной работе.</p>
+            <p>Если у вас есть идея и вы ищите исполнителя для её осуществления, то мы поможем вам в этом.</p>
+			<a href="/orders/new" class="button">Создать объявление.</a>
+		</div>
+	</div>
+</div>
+
+<!-- Filter -->
+<div id="Filter">
+	<div id="filter-frame">
+		<ul>
+			<li id="filter-li">
+                <label class="currency"><input type="checkbox" id="checkbox2" class="dh"><a class="designbutton">Design</a></label>
+                <label class="currency"><input type="checkbox" id="checkbox2" class="dh"><a class="videobutton">Video\Audio</a></label>
+                <label class="currency"><input type="checkbox" id="checkbox2" class="dh"><a class="textbutton">Text\Localisation</a></label>
+                <label class="currency"><input type="checkbox" id="checkbox2" class="dh"><a class="photobutton">Photo 2D\3D Graphics</a></label>
+                <label class="currency"><input type="checkbox" id="checkbox2" class="dh"><a class="progrbutton">Website Layout\Programming</a></label>
+                <label class="currency"><input type="checkbox" id="checkbox2" class="dh"><a class="gamedevbutton">GameDev</a></label>
+            </li>
+		</ul>
+    </div>
+</div>
+     
+<!-- Wrapper featured -->
+    <div id="wrapper"class="margin-btm">
+        <% orders.forEach(function(order){ %>
+        
+            <!-- zakaz -->
+            <div id="featured-wrapper" class="<%= order.category %>">
+                <div id="featured" class="margin-btm">
+                    
+        <!-- picture -->
+            <img class="img-box" src="<%= order.image %>">
+
+        <!-- name order -->
+                    <div class="caption"><h2><%= order.name %></h2></div>   
+                    
+        <!-- category -->
+                <div class="caption">
+                <p>Категория: <%= order.category %></p>
+                </div>
+
+        <!-- button -->
+                    <a href="/orders/<%= order._id %>" class="button">Подробнее</a>             
+            </div>
+        </div>
+    
+        <% }); %>
+       
+    
+    </div>
+
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              
+    <div class="wrapper-content" id="bl">
+        <h2>Лучшие фрилансеры</h2>
+        <div id="bl">
+        
+            <div id="featured-wrapper" class="freelancer">
+                <div id="featured" class="margin-btm">
+                    <img class="img-box" src="https://sun9-53.userapi.com/impg/y4W7s3P81Tx0ej_RD5slXXjmUFhbocJOfs6Q4w/3e1itKW3f4s.jpg?size=724x653&amp;quality=96&amp;sign=ca747b652c21d8b5a5630c003a7b4ac8&amp;type=album">
+                <div class="caption"><h2>Я фрилансер</h2></div>   
+    
+                    <div class="caption">
+                        <p> freelancer</p>
+                        </div>
+    
+                        <div class="caption">
+                            <p> FLR: 575</p>
+                            </div>        
+    
+                      
+        <!-- button -->
+                    <a href="/users/60ccf8ccfeac7e4470d0daa8" class="button">Подробнее</a>             
+            </div>
+        </div>
+    
+    
+        
+        <div id="featured-wrapper" class="freelancer">
+                <div id="featured" class="margin-btm">
+                    <img class="img-box" src="https://sun9-41.userapi.com/impg/J6SdbJL-VG_4IWcxK35YPohRC9DLSAypLJo50Q/arigvkpGn5Q.jpg?size=1000x1000&amp;quality=96&amp;sign=55198552fbbd2c0a438e1b9f0622adff&amp;type=album">
+                <div class="caption"><h2>alek21</h2></div>   
+    
+                    <div class="caption">
+                        <p> freelancer</p>
+                        </div>
+    
+                        <div class="caption">
+                            <p> FLR: 125</p>
+                            </div>        
+    
+                      
+        <!-- button -->
+                    <a href="/users/60cd2c66f21b0e0015ef6a63" class="button">Подробнее</a>             
+            </div>
+        </div>
+    
+    
+    
+        
+        <div id="featured-wrapper" class="freelancer">
+                <div id="featured" class="margin-btm">
+                    <img class="img-box" src="https://sun9-26.userapi.com/impg/is803kOE2-lZa2v-vh2KGIqiKGSkTMSOuL0pnw/_BRO3esqe7E.jpg?size=606x456&amp;quality=96&amp;sign=13df4ae854b3c8d23002d0e54f761008&amp;type=album">
+                <div class="caption"><h2>Ly4shiy  </h2></div>   
+    
+                    <div class="caption">
+                        <p> freelancer</p>
+                        </div>
+    
+                        <div class="caption">
+                            <p> FLR: 425</p>
+                            </div>        
+    
+                      
+        <!-- button -->
+                    <a href="/users/60cf58e77e254c35686df805" class="button">Подробнее</a>             
+            </div>
+        </div>
+        <div id="featured-wrapper" class="freelancer">
+            <div id="featured" class="margin-btm">
+                <img class="img-box" src="https://sun9-46.userapi.com/impg/6XcDcE5JJOjmthr-4GWr88puuiAfcgHvyhIunw/isoHGcXEclw.jpg?size=1200x1200&amp;quality=96&amp;sign=f7c12f938706d70d564e18a7e13979ea&amp;type=album">
+            <div class="caption"><h2>artemka</h2></div>   
+
+                <div class="caption">
+                    <p> freelancer</p>
+                    </div>
+
+                    <div class="caption">
+                        <p> FLR: 500</p>
+                        </div>        
+
+                  
+    <!-- button -->
+                <a href="/users/60cfb156adaaec0e90d37883" class="button">Подробнее</a>             
+        </div>
+    </div>
+
+        </div>
+
+        <a href="/freelancers" class="button">Все фрилансеры</a>
+
+    </div>
+
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+              <!-- FIX THAT!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+    <div class="wrapper-content" id="bi">
+        <div id="bi">
+            <h2>Информация
+            </h2>
+            <p> Дорогие друзья!
+                Ресурс QuickRu специально разработан для тех, кто самостоятелен, ответственен, образован, уверен в себе и полагается только на себя, кто считает себя «независимым художником», вольным бойцом – именно эти качества заложены в гордом названии «freelancer».
+                
+                В последнее время удаленная работа привлекает не только тех самозанятых, кто предпочитает «свободный полет» и называет себя «freelancer». Ею интересуются люди творческих и технических профессий, постоянно служащие в штате, но готовые выполнять дополнительную работу, а также организации и компании, которые нуждаются в удаленных сотрудниках.
+                
+                Мы уверены, что разделы «проекты» (удаленная работа вакансии, работа фриланс), «вакансии» (постоянная работа) и «конкурсы» будут полезны как фрилансерам, так и заказчикам.
+                
+                Впрочем, наш фриланс -проект создан не только с целью помочь желающим найти подходящую удаленную работу удаленная работа вакансии, но и для того, чтобы каждый самозанятый и фрилансер имел возможность встретиться здесь со своими коллегами, обсудить профессиональные вопросы, выбрать необходимый инструментарий и просто получить удовольствие от общения с друзьями, рассказать о своих достижениях, поделиться своими проблемами, посмотреть удаленная работа вакансии.
+                
+                Мы счастливы видеть вас на сайте Quick.ru. С удовольствием выслушаем ваши отзывы о проекте. Внимательно отнесемся к замечаниям и пожеланиям. Присылайте их нам или высказывайте на Форуме.
+                
+                Пусть ваш путь во фрилансе будет успешен, и удача сопутствует всем вашим начинаниям!
+                
+                 </p>
+        </div>
+    </div>
+
+
+    <script>
+
+        ///DESIGN CATEGORY SHOWHIDE
+        let desbtn = document.querySelector('.designbutton');
+        let descat = document.querySelector('.Design');
+        
+            desbtn.addEventListener('click', () => {
+                if(descat.style.display === 'none'){
+                    [].forEach.call(document.querySelectorAll('.Design'), function (el) {
+                        el.style.display = 'inline-block';
+                    })
+                }else {
+                    [].forEach.call(document.querySelectorAll('.Design'), function (el) {
+                        el.style.display = 'none';
+                    })
+                }
+            })
+        
+        ///VIDEO CATEGORY SHOWHIDE
+        let vidbtn = document.querySelector('.videobutton');
+        let vidcat = document.querySelector('.Video');
+        
+            vidbtn.addEventListener('click', () => {
+                if(vidcat.style.display === 'none'){
+                    [].forEach.call(document.querySelectorAll('.Video'), function (el) {
+                        el.style.display = 'inline-block';
+                    })
+                }else {
+                    [].forEach.call(document.querySelectorAll('.Video'), function (el) {
+                        el.style.display = 'none';
+                    })
+                }
+            })
+
+        ///TEXT CATEGORY SHOWHIDE
+        let textbtn = document.querySelector('.textbutton');
+        let textcat = document.querySelector('.Text');
+        
+            textbtn.addEventListener('click', () => {
+                if(textcat.style.display === 'none'){
+                    [].forEach.call(document.querySelectorAll('.Text'), function (el) {
+                        el.style.display = 'inline-block';
+                    })
+                }else {
+                    [].forEach.call(document.querySelectorAll('.Text'), function (el) {
+                        el.style.display = 'none';
+                    })
+                }
+            })
+        ///PHOTO CATEGORY SHOWHIDE
+        let phobtn = document.querySelector('.photobutton');
+        let phocat = document.querySelector('.Photo');
+        
+            phobtn.addEventListener('click', () => {
+                if(phocat.style.display === 'none'){
+                    [].forEach.call(document.querySelectorAll('.Photo'), function (el) {
+                        el.style.display = 'inline-block';
+                    })
+                }else {
+                    [].forEach.call(document.querySelectorAll('.Photo'), function (el) {
+                        el.style.display = 'none';
+                    })
+                }
+            }) 
+
+        ///PROGRAMMING CATEGORY SHOWHIDE
+        let progbtn = document.querySelector('.progrbutton');
+        let progcat = document.querySelector('.Programming');
+        
+            progbtn.addEventListener('click', () => {
+                if(progcat.style.display === 'none'){
+                    [].forEach.call(document.querySelectorAll('.Programming'), function (el) {
+                        el.style.display = 'inline-block';
+                    })
+                }else {
+                    [].forEach.call(document.querySelectorAll('.Programming'), function (el) {
+                        el.style.display = 'none';
+                    })
+                }
+            }) 
+        
+        ///GAMEDEV CATEGORY SHOWHIDE
+        let gdbtn = document.querySelector('.gamedevbutton');
+        let gdcat = document.querySelector('.GameDev');
+        
+            gdbtn.addEventListener('click', () => {
+                if(gdcat.style.display === 'none'){
+                    [].forEach.call(document.querySelectorAll('.GameDev'), function (el) {
+                        el.style.display = 'inline-block';
+                    })
+                }else {
+                    [].forEach.call(document.querySelectorAll('.GameDev'), function (el) {
+                        el.style.display = 'none';
+                    })
+                }
+            }) 
+            
+
+        
+    </script>
+
+<% include ../partials/footer %>
